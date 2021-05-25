@@ -1,0 +1,27 @@
+/* header, footer{
+   
+    min-height: 100px;
+}
+main{
+    min-height: 500px;
+} */
+/* #noline{
+    text-decoration: none;
+} */ 
+.navbar{
+    background-color: rgb(41, 13, 163);
+} 
+.navbar-light .navbar-nav .nav-link
+{
+    color: blue;
+    font-size: 8px;
+}
+.navbar-light .navbar-nav .nav-link:hover
+{
+    text-decoration: underline;
+}
+
+main{
+    min-height: 300px;
+    width: 300px;
+}

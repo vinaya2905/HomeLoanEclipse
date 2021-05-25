@@ -1,0 +1,33 @@
+/* .container {  
+    width: 100%;  
+    height: auto;  
+      text-align: center;
+    padding: 15px;  
+    border: 3px solid rgb(241, 234, 234); 
+    background-color: #218b92; 
+    color: ivory;
+    border-radius: 30px;
+
+    }  
+    img {  
+         margin-right: auto;
+        height: 100px;
+        width: 100px;
+        
+    }   
+    #right{    
+        float:  right; 
+        right: 500px; 
+        
+    } */
+    .container {  
+      width: 100%;  
+      height: auto;  
+        text-align: center;
+      padding: 15px;  
+      border: 3px solid rgb(241, 234, 234); 
+      background-color: #218b92; 
+      color: ivory;
+      border-radius: 30px;
+  
+    }  

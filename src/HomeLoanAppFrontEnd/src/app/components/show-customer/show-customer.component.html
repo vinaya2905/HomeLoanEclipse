@@ -1,0 +1,35 @@
+<h2> List of Customers</h2>
+<div class="table-responsive">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">CustomerName</th>
+        <th scope="col">MobileNumber</th>
+        <th scope="col">EmailId</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Nationality</th>
+        <th scope="col">AadharNumber</th>
+        <th scope="col">PanNumber</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Update Data</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of customers" [ngStyle]="{'backgroundColor':'pink'}">
+            <td>{{b.cust_id}}</td>
+            <td>{{b.customerName}}</td>
+            <td>{{b.mobileNumber}}</td>
+            <td>{{b.emailId}}</td>
+            <td>{{b.dateOfBirth}}</td>
+            <td>{{b.gender}}</td>
+            <td>{{b.nationality}}</td>
+            <td>{{b.aadharNumber}}</td>
+            <td>{{b.panNumber}}</td>
+            <td>{{b.user.userId}}</td>
+            <td><button (click)="updateCustomer(b.cust_id)">Update</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>

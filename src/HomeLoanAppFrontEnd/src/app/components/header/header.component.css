@@ -1,0 +1,25 @@
+/* .noline{
+    text-decoration: none;
+    color: wheat;
+    font-style: italic;
+    background-color: black;
+} */
+#logo{ 
+	/* position:fixed;  */
+	top:49px; 
+	left:120px; 
+    height: 60px;
+    width: 100px;
+} 
+.navbar{
+    background-color: rgb(75, 192, 21); 
+} 
+.navbar-light .navbar-nav .nav-link
+{
+    color: rgb(97, 33, 139);
+    font-size: 19px;
+}
+.navbar-light .navbar-nav .nav-link:hover
+{
+    text-decoration: underline;
+}

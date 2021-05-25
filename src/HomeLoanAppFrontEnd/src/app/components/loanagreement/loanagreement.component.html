@@ -1,0 +1,48 @@
+<h2>Add a Customer</h2>
+<body>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Data successfully added :)
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<form #details="ngForm" (ngSubmit)="add(details.value)" ngNativeValidate>
+
+<div class="form-group col-md-4">
+    <label>
+        LoanApplicationtId :
+    </label>
+   
+    <input type="text" class="form-control" placeholder="Enter LoanApplicationtId" name="loanapplicationId" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Due Date :
+    </label>
+    <input type="date" class="form-control" placeholder="Due Date " name="dueDate" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        EMIAmount:
+    </label>
+    <input type="text" class="form-control" placeholder="Enter EMIAmount" name="emiAmount" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        LoanAmount:
+    </label>
+    <input type="text" class="form-control" placeholder="Enter LoanAmount" name="loanAmount" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        InterestAmount:
+    </label>
+    <input type="text" class="form-control" placeholder="Enter InterestAmount" name="interestAmount" required ngModel/>
+</div>
+<br>
+<button type="submit" class="btn btn-primary">Add LoanAgreement</button>
+</form>
+</body>
+<!-- <div *ngIf="createdFlag" >
+    Created Customer with ID: {{createdCustomer.cust_id}}, Name: {{createdCustomer.customerName}}    
+</div> -->

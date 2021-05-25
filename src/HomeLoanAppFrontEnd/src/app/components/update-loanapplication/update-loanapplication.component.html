@@ -1,0 +1,72 @@
+<h2>Update Loan Application</h2>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Data successfully updated :)
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<form #details="ngForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+<div class="form-group col-md-4">
+    <label>
+        Application Id:
+    </label>
+    <input type="text" class="form-control" placeholder="Enter ID" name="applicationId" required [(ngModel)]="loanapplication.applicationId"/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Application Date :
+    </label>
+   
+    <input type="date" class="form-control" placeholder="Enter ApplicationDate" name="applicationDate" required [(ngModel)]="loanapplication.applicationDate"/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        LoanApplied Amount :
+    </label>
+    <input type="text" class="form-control" placeholder="Enter LoanAppliedAmount" name="loanAppliedAmount" required [(ngModel)]="loanapplication.loanAppliedAmount"/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        LoanApproved Amount:
+    </label>
+    <input type="text" class="form-control" placeholder="Enter LoanApproved Amount" name="loanApprovedAmount" required [(ngModel)]="loanapplication.loanApprovedAmount"/>
+</div>
+<!--<div class="form-group col-md-4">
+    <label>
+        LandVerification Officer Approval :
+    </label>
+    <input type="text" class="form-control" placeholder="false " name="dateOfBirth" required [([(ngModel)]]="loanapplication.")]]="loanapplication."/>
+</div>-->
+<div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="landVerificationApproval" disabled>
+    <label class="form-check-label" for="exampleCheck1">LandVerification Officer Approval</label>
+</div>
+<div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="financeVerificationApproval" disabled>
+    <label class="form-check-label" for="exampleCheck1">FinanceVerification Officer Approval</label>
+</div>
+<div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="adminApproval" >
+    <label class="form-check-label" for="exampleCheck1">Admin Approval</label>
+</div>
+
+<div class="form-group col-md-4">
+    <label>
+        Status :
+    </label>
+    <input type="text" class="form-control" placeholder="Status" name="status" defaultValue="PENDING"required [(ngModel)]="loanapplication.status"/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Customer Id :
+    </label>
+   
+    <input type="text" class="form-control" placeholder="Enter Customer Id" name="cust_id" required [(ngModel)]="loanapplication.cust_id"/>
+</div>
+<br>
+<button type="submit" class="btn btn-primary">Add LoanApplication</button>
+</form>
+<!-- <div *ngIf="createdFlag" >
+    Created Customer with ID: {{createdLoanApp.applicationId}}, Date: {{createdLoanApp.applicationDate}}    
+</div> -->
+

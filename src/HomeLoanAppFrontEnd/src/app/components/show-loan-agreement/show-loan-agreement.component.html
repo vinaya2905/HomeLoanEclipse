@@ -1,0 +1,29 @@
+<h2>All Applications</h2>
+<div class="table-responsive">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">AgreementId</th>
+            <th scope="col">ApplicationId</th>
+            <th scope="col">EMI Id</th>
+            <th scope="col">EMI AMount</th>
+            <th scope="col">Loan Amount</th>
+            <!-- <th scope="col">InterestAmount</th> -->
+            <!--<th scope="col">Update Data</th>-->
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of agreement" [ngStyle]="{'backgroundColor':'pink'}">
+                <td>{{b.loanAgreementId}}</td>
+                <td>{{b.loanapplicationId}}</td>
+                <td>{{b.emi.emiid}}</td>
+                <td>{{b.emi.emiAmount}}</td>
+                <td>{{b.emi.loanAmount}}</td>
+                <!-- <td>{{b.emi.interestAmount}}</td> -->
+               
+                <td><button  (click)="updateLoanAgreement(b.loanAgreementId)">Update</button></td>
+                <!-- <td><button (click)="updateCustomer(b.applicationId)">Update</button></td> -->
+            </tr>
+          </tbody>
+        </table>
+    </div>

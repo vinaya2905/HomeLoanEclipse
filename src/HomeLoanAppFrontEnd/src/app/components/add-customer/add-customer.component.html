@@ -1,0 +1,87 @@
+<h2>Add a Customer</h2>
+<body>
+<div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Data successfully added :)
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<form #details="ngForm" (ngSubmit)="add(details.value)" ngNativeValidate>
+<div class="form-group col-md-4">
+    <label>
+        Customer Id:
+    </label>
+    <input type="text" class="form-control" placeholder="Enter ID" name="cust_id" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Customer Name :
+    </label>
+   
+    <input type="text" class="form-control" placeholder="Enter Name" name="customerName" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Mobile Number :
+    </label>
+    <input type="text" class="form-control" placeholder="Enter MobileNumber" name="mobileNumber" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Email Id:
+    </label>
+    <input type="text" class="form-control" placeholder="Enter Email Id" name="emailId" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Date Of Birth :
+    </label>
+    <input type="date" class="form-control" placeholder="Enter Date Of Birth " name="dateOfBirth" required ngModel/>
+</div>
+
+<div class="form-group col-md-4">
+    <label for="inputState">Gender</label>
+    <select id="inputState" class="selectpicker form-control"  name="gender" ngModel>
+      
+      <option>MALE</option>
+      <option>FEMALE</option>
+    </select>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Nationality :
+    </label>
+    <input type="text" class="form-control" placeholder="Enter Nationality" name="nationality" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        AadharNumber :
+    </label>
+   
+    <input type="text" class="form-control" placeholder="Enter AadharNumber" name="aadharNumber" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Pan Number :
+    </label>
+    <input type="text" class="form-control" placeholder="Enter PanNumber" name="panNumber" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Password :
+    </label>
+    <input type="password" class="form-control" placeholder="Enter Password" name="password" required ngModel/>
+</div>
+<div class="form-group col-md-4">
+    <label>
+        Role :
+    </label>
+    <input type="text" class="form-control" placeholder="Enter Role"name="role" required ngModel/>
+</div>
+<br>
+<button type="submit" class="btn btn-primary">Add Customer</button>
+</form>
+</body>
+<!-- <div *ngIf="createdFlag" >
+    Created Customer with ID: {{createdCustomer.cust_id}}, Name: {{createdCustomer.customerName}}    
+</div> -->

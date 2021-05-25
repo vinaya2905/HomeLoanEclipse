@@ -1,0 +1,136 @@
+<h2>Check your Details Here: </h2>
+<body>
+<form #details="ngForm" (ngSubmit)="custDetails(details.value)" >
+    <div class="flex-parent jc-center">
+    <input type="text" class="form-control" placeholder="Enter Id"name="cust_id" required [(ngModel)]="search_value"/>
+    <br>
+    <button type="submit" class="btn btn-primary">Check Details</button>
+    </div>
+</form>
+<br>
+<div class="table-responsive">
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">CustomerName</th>
+          <th scope="col">MobileNumber</th>
+          <th scope="col">EmailId</th>
+          <th scope="col">DOB</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Nationality</th>
+          <th scope="col">AadharNumber</th>
+          <th scope="col">PanNumber</th>
+          <!-- <th scope="col">User Id</th> -->
+          <th scope="col">Update Data</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr  [ngStyle]="{'backgroundColor':'pink'}">
+              <td>{{foundCust.cust_id}}</td>
+              <td>{{foundCust.customerName}}</td>
+              <td>{{foundCust.mobileNumber}}</td>
+              <td>{{foundCust.emailId}}</td>
+              <td>{{foundCust.dateOfBirth}}</td>
+              <td>{{foundCust.gender}}</td>
+              <td>{{foundCust.nationality}}</td>
+              <td>{{foundCust.aadharNumber}}</td>
+              <td>{{foundCust.panNumber}}</td>
+              <!-- <td>{{foundCust.user.userId}}</td> -->
+              <td><button (click)="updateCustomer(foundCust.cust_id)">Update</button></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+<br>
+<h2>Check your Loan Application Details Here: </h2>
+<form  #fm="ngForm" (ngSubmit)="loanTrack(fm.value)" required ngModel>
+  <div class="flex-parent jc-center">
+    <input type="text" class="form-control" placeholder="Enter Id"name="applicationId" required [(ngModel)]="application_id"/>
+    <br>
+    <button type="submit" class="btn btn-primary">Loan Application Details</button>
+  </div>
+ 
+</form>
+<br>
+<div class="table-responsive">
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">ApplicationDate</th>
+          <th scope="col">LoanAppliedAmount</th>
+          <th scope="col">LoanApprovedAmount</th>
+          <th scope="col">LandVerificationApproval</th>
+          <th scope="col">FinanceVerificationApproval</th>
+          <th scope="col">AdminApproval</th>
+          <th scope="col">Status</th>
+          <!-- <th scope="col">CustomerID</th> -->
+          <!--<th scope="col">Update Data</th>-->
+        </tr>
+      </thead>
+      <tbody>
+          <tr  [ngStyle]="{'backgroundColor':'pink'}">
+              <td>{{foundLoan.applicationId}}</td>
+              <td>{{foundLoan.applicationDate}}</td>
+              <td>{{foundLoan.loanAppliedAmount}}</td>
+              <td>{{foundLoan.loanApprovedAmount}}</td>
+              <td>{{foundLoan.landVerificationApproval}}</td>
+              <td>{{foundLoan.financeVerificationApproval}}</td>
+              <td>{{foundLoan.adminApproval}}</td>
+              <td>{{foundLoan.status}}</td>
+              <!-- <td>{{foundLoan.cust_id}}</td> -->
+              <!-- <td><button  (click)="updateLoanApplication(b.applicationId)">Update</button></td> -->
+              <!-- <td><button (click)="updateCustomer(b.applicationId)">Update</button></td> -->
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <h2>Check EMI Details Here :</h2>
+  <br>
+  <form #v="ngForm" (ngSubmit)="agmtDetails(v.value)" required ngModel >
+    <div class="flex-parent jc-center">
+    <input type="text" class="form-control" placeholder="Enter Id"name="loanAgreementId" required [(ngModel)]="agreementId"/>
+    <br>
+    <button type="submit" class="btn btn-primary">Check EMI Details</button>
+    </div>
+</form>
+<br>
+  <div class="table-responsive">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">AgreementId</th>
+            <th scope="col">ApplicationId</th>
+            <th scope="col">EMI Id</th>
+            <th scope="col">EMI AMount</th>
+            <th scope="col">Loan Amount</th>
+            <!-- <th scope="col">InterestAmount</th> -->
+            <!--<th scope="col">Update Data</th>-->
+          </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let b of agreement" [ngStyle]="{'backgroundColor':'pink'}">
+                <td>{{b.loanAgreementId}}</td> -->
+                <tr>
+                <td>{{foundAgmt.loanapplicationId}}</td>
+                <td>{{foundAgmt.emi.emiid}}</td>
+                <td>{{foundAgmt.emi.emiAmount}}</td>
+                <td>{{foundAgmt.emi.loanAmount}}</td>
+                <!-- <td>{{b.emi.interestAmount}}</td> -->
+               
+                <td><button  (click)="updateLoanAgreement(foundAgmt.loanAgreementId)">Update</button></td>
+                <!-- <td><button (click)="updateCustomer(b.applicationId)">Update</button></td> -->
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" routerLink="">Logout</button>
+  <button type="button" class="btn btn-secondary" routerLink="/add-loanapplication">AddLoanApplication</button>
+  <button type="button" class="btn btn-secondary" routerLink="/add-loanAgmnt">AddLoanAgreement</button>
+</div>
+
+</body>
+
