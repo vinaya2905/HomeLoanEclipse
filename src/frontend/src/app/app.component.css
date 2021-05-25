@@ -1,0 +1,7 @@
+header, footer{
+    background-color: lightblue;
+    min-height: 100px;
+}
+main{
+    min-height: 500px;
+}
